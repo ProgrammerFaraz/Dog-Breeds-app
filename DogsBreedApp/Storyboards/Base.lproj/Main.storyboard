@@ -16,11 +16,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="FAx-iR-vnL">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="FAx-iR-vnL">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HomeTableViewCell" rowHeight="70" id="kEN-3S-gPn" customClass="HomeTableViewCell" customModule="DogsBreedApp" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="HomeTableViewCell" rowHeight="70" id="kEN-3S-gPn" customClass="HomeTableViewCell" customModule="DogsBreedApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kEN-3S-gPn" id="RNq-Pc-Px0">
@@ -85,21 +85,31 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="1Ia-yL-dbz">
+                                <rect key="frame" x="182" y="154.5" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="1Ia-yL-dbz" secondAttribute="height" multiplier="1:1" id="L20-6a-V7D"/>
+                                    <constraint firstAttribute="width" constant="50" id="Wmd-zX-0cq"/>
+                                </constraints>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="hBe-U6-k8F"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="DE8-pi-IlU" firstAttribute="centerX" secondItem="OhA-eu-8z0" secondAttribute="centerX" id="77e-PR-xl9"/>
                             <constraint firstItem="OhA-eu-8z0" firstAttribute="leading" secondItem="hBe-U6-k8F" secondAttribute="leading" constant="10" id="G5k-ot-u0L"/>
                             <constraint firstItem="OhA-eu-8z0" firstAttribute="top" secondItem="hBe-U6-k8F" secondAttribute="top" constant="10" id="K3f-yA-hwm"/>
                             <constraint firstItem="DE8-pi-IlU" firstAttribute="top" secondItem="OhA-eu-8z0" secondAttribute="bottom" constant="25" id="Rca-u9-Dsj"/>
+                            <constraint firstItem="1Ia-yL-dbz" firstAttribute="centerY" secondItem="OhA-eu-8z0" secondAttribute="centerY" id="Slh-Gr-NIr"/>
                             <constraint firstItem="hBe-U6-k8F" firstAttribute="trailing" secondItem="OhA-eu-8z0" secondAttribute="trailing" constant="10" id="XFo-Uh-sks"/>
                             <constraint firstItem="OhA-eu-8z0" firstAttribute="height" secondItem="wNT-UB-MH4" secondAttribute="height" multiplier="0.28" id="dh3-mh-9V6"/>
+                            <constraint firstItem="1Ia-yL-dbz" firstAttribute="centerX" secondItem="OhA-eu-8z0" secondAttribute="centerX" id="wKq-86-uMS"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="breedNameLabel" destination="DE8-pi-IlU" id="eS0-xz-eeE"/>
-                        <outlet property="dogImageView" destination="OhA-eu-8z0" id="3G6-7K-pY8"/>
+                        <outlet property="activityIndicator" destination="1Ia-yL-dbz" id="bNB-Jk-r2b"/>
+                        <outlet property="breedNameLabel" destination="DE8-pi-IlU" id="ZDJ-6w-lwQ"/>
+                        <outlet property="dogImageView" destination="OhA-eu-8z0" id="SRp-TZ-c37"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gps-7o-waB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

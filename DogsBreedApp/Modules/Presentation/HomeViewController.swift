@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class HomeViewController: BaseViewController {
 
     //MARK: - OUTLETS
     @IBOutlet weak var tableView: UITableView?
@@ -45,7 +45,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "HomeTableViewCell") as? HomeTableViewCell,
-        let viewModel = viewModel else {
+              let viewModel = viewModel else {
             return UITableViewCell()
         }
         cell.configure(breedName: viewModel.breeds[indexPath.row])
@@ -53,6 +53,13 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 70
+        return HomeTableViewCell.rowHeight
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let vc = BreedDetailDependencyProvider.viewController,
+              let viewModel = viewModel else { return }
+        vc.breedName = viewModel.breeds[indexPath.row]
+        self.route(to: vc, navigation: .push)
     }
 }

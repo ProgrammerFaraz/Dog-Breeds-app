@@ -10,6 +10,7 @@ import Moya
 enum API {
     case listAllBreeds
     case listByBreed(param: [String: Any])
+    case breedImage(params: String)
 }
 
 extension API: TargetType {
@@ -26,13 +27,15 @@ extension API: TargetType {
             return "breeds/list/all"
         case .listByBreed:
             return "breed/"
+        case .breedImage(let params):
+            return "breed/\(params)/images/random"
         }
     }
     
     /// The HTTP method used in the request.
     var method: Method {
         switch self {
-        case .listAllBreeds, .listByBreed:
+        case .listAllBreeds, .listByBreed, .breedImage:
             return .get
         }
     }
@@ -49,13 +52,15 @@ extension API: TargetType {
             return .requestParameters(parameters: params, encoding: JSONEncoding.default)
         case .listAllBreeds:
             return .requestPlain
+        case .breedImage:
+            return .requestPlain
         }
     }
     
     /// The headers to be used in the request.
     var headers: [String : String]? {
         switch self {
-        case .listAllBreeds, .listByBreed:
+        case .listAllBreeds, .listByBreed, .breedImage:
             return ["Content-Type": "application/json"]
         }
     }

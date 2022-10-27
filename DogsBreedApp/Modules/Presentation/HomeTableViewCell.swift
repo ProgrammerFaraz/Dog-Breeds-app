@@ -8,6 +8,8 @@
 import UIKit
 
 class HomeTableViewCell: UITableViewCell {
+    
+    static let rowHeight: CGFloat = 70
 
     @IBOutlet weak var titleLabel: UILabel!
     

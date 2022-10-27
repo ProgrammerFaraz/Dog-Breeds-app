@@ -1,14 +1,14 @@
 //
-//  DogBreedsModel.swift
+//  DogImageModel.swift
 //  DogsBreedApp
 //
-//  Created by Faraz Ahmed Khan on 26/10/2022.
+//  Created by Faraz Ahmed Khan on 27/10/2022.
 //
 
 import Foundation
 
-struct DogBreedsModel: Codable {
-    let data: [String: [String]]
+struct DogImageModel: Codable {
+    let data: String?
     let status: String?
     
     enum CodingKeys: String, CodingKey {

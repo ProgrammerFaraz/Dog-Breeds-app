@@ -10,22 +10,30 @@ import UIKit
 /// Dependency resolver for Breed Detail module
 struct BreedDetailDependencyProvider {
     
+    /// Resolved Repository
+    static var breedDetailRepository: BreedDetailRepository {
+        return BreedDetailRepository()
+    }
+    
+    /// Resolved Datasource
+    static var breedDetailRemoteDatasource: BreedDetailRemoteDatasource {
+        return BreedDetailRemoteDatasource()
+    }
+
     /// Resolved UseCases
-//    static var getAllBreedUsecase: GetAllBreedsUsecase {
-//        return DefaultGetAllBreedsUsecase(homeRepository: homeRepository)
-//    }
+    static var getBreedImagesUsecase: GetBreedImagesUsecase {
+        return DefaultGetBreedImagesUsecase(repository: breedDetailRepository)
+    }
 
     /// Resolved ViewModel
     static var viewModel: DefaultBreedDetailViewModel {
-        return DefaultBreedDetailViewModel()
+        return DefaultBreedDetailViewModel(getBreedImageUsecase: getBreedImagesUsecase)
     }
 
     /// Resolved ViewController
-    static var viewController: UIViewController {
-        guard let vc = Storyboards.main.instantiateVC(BreedDetailViewController.self) else {
-            return UIViewController()
-        }
-        vc.viewModel = viewModel
+    static var viewController: BreedDetailViewController? {
+        let vc = Storyboards.main.instantiateVC(BreedDetailViewController.self)
+        vc?.viewModel = viewModel
         return vc
     }
 

@@ -7,21 +7,44 @@
 
 import UIKit
 
-class BreedDetailViewController: UIViewController {
-
+class BreedDetailViewController: BaseViewController {
+    
+    //MARK: - OUTLETS
     @IBOutlet weak var dogImageView: UIImageView!
     @IBOutlet weak var breedNameLabel: UILabel!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
+    //MARK: - PROPERTIES
     var viewModel: DefaultBreedDetailViewModel?
-
+    var breedName = ""
+    
+    //MARK: - LIFECYCLE
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setupviews()
+        bindHomeViewModel()
+        getImage()
         // Do any additional setup after loading the view.
     }
-
-    func configure(breedName: String, dogImage: UIImage) {
-        self.dogImageView.image = dogImage
+    
+    //MARK: - SETUP
+    func setupviews() {
         self.breedNameLabel.text = breedName
     }
+    
+    private func bindHomeViewModel() {
+        viewModel?.onSuccess = { [weak self] image in
+            self?.dogImageView.image = image
+            self?.activityIndicator.stopAnimating()
+        }
+        viewModel?.onError = { error in
+            print("onError called with \(error)")
+        }
+    }
+    
+    private func getImage() {
+        activityIndicator.startAnimating()
+        viewModel?.getBreedImage(breed: breedName, method: .remote)
+    }
+
 }
