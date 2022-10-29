@@ -19,7 +19,7 @@ protocol APIRequestProtocol {
 
 class NetworkManager: APIRequestProtocol {
     
-    static var provider = MoyaProvider<API>(plugins: [NetworkLoggerPlugin()])
+    private static var provider = MoyaProvider<API>(plugins: [NetworkLoggerPlugin()])
     
     /// Generic method for remote network request
     /// - Parameters:

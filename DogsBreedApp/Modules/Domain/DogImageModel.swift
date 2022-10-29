@@ -8,8 +8,8 @@
 import Foundation
 
 struct DogImageModel: Codable {
-    let data: String?
-    let status: String?
+    let data: [String]
+    let status: String
     
     enum CodingKeys: String, CodingKey {
         case data = "message"

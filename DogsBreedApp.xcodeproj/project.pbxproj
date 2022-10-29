@@ -14,6 +14,8 @@
 		091224E8290870F300911D1B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091224DD290870F300911D1B /* AppDelegate.swift */; };
 		091224E9290870F300911D1B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091224E2290870F300911D1B /* HomeViewController.swift */; };
 		091224EB290877E800911D1B /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091224EA290877E800911D1B /* NetworkManager.swift */; };
+		0934CC7C290C7B3900FDA506 /* AppDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0934CC7B290C7B3900FDA506 /* AppDefaults.swift */; };
+		0934CC7F290C866000FDA506 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0934CC7E290C866000FDA506 /* ImageCollectionViewCell.swift */; };
 		09672F6B290AFC1600F1C7D8 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09672F6A290AFC1600F1C7D8 /* BaseViewController.swift */; };
 		09672F6D290B091600F1C7D8 /* GetBreedImagesUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09672F6C290B091600F1C7D8 /* GetBreedImagesUsecase.swift */; };
 		09672F6F290B09FF00F1C7D8 /* DogImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09672F6E290B09FF00F1C7D8 /* DogImageModel.swift */; };
@@ -34,6 +36,8 @@
 		09B020702909DE2E00E6AF8A /* BreedDetailDependencyProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B0206F2909DE2E00E6AF8A /* BreedDetailDependencyProvider.swift */; };
 		09B020722909DEC900E6AF8A /* BreedDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B020712909DEC900E6AF8A /* BreedDetailViewModel.swift */; };
 		09B020742909DF4B00E6AF8A /* FavouriteBreedUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B020732909DF4B00E6AF8A /* FavouriteBreedUsecase.swift */; };
+		09CA4713290D22F400FED777 /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CA4712290D22F400FED777 /* DBManager.swift */; };
+		09CA4715290D235500FED777 /* RealmImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CA4714290D235500FED777 /* RealmImageModel.swift */; };
 		666E8004E65A6EE2EE9FBAC3 /* Pods_DogsBreedApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE16DB2B4DFB9645D2A258A5 /* Pods_DogsBreedApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +51,8 @@
 		091224DD290870F300911D1B /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		091224E2290870F300911D1B /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		091224EA290877E800911D1B /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		0934CC7B290C7B3900FDA506 /* AppDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDefaults.swift; sourceTree = "<group>"; };
+		0934CC7E290C866000FDA506 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		09672F6A290AFC1600F1C7D8 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		09672F6C290B091600F1C7D8 /* GetBreedImagesUsecase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetBreedImagesUsecase.swift; sourceTree = "<group>"; };
 		09672F6E290B09FF00F1C7D8 /* DogImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogImageModel.swift; sourceTree = "<group>"; };
@@ -67,6 +73,8 @@
 		09B0206F2909DE2E00E6AF8A /* BreedDetailDependencyProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedDetailDependencyProvider.swift; sourceTree = "<group>"; };
 		09B020712909DEC900E6AF8A /* BreedDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedDetailViewModel.swift; sourceTree = "<group>"; };
 		09B020732909DF4B00E6AF8A /* FavouriteBreedUsecase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteBreedUsecase.swift; sourceTree = "<group>"; };
+		09CA4712290D22F400FED777 /* DBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
+		09CA4714290D235500FED777 /* RealmImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmImageModel.swift; sourceTree = "<group>"; };
 		0B269E8153910AC455B23643 /* Pods-DogsBreedApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DogsBreedApp.release.xcconfig"; path = "Target Support Files/Pods-DogsBreedApp/Pods-DogsBreedApp.release.xcconfig"; sourceTree = "<group>"; };
 		8B1FE567DB80CC6FD7D5F3B1 /* Pods-DogsBreedApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DogsBreedApp.debug.xcconfig"; path = "Target Support Files/Pods-DogsBreedApp/Pods-DogsBreedApp.debug.xcconfig"; sourceTree = "<group>"; };
 		CE16DB2B4DFB9645D2A258A5 /* Pods_DogsBreedApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DogsBreedApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -105,6 +113,7 @@
 		091224D0290870F300911D1B /* DogsBreedApp */ = {
 			isa = PBXGroup;
 			children = (
+				09CA4711290D1F7600FED777 /* DBManager */,
 				091224DC290870F300911D1B /* Application */,
 				091224D6290870F300911D1B /* Resources */,
 				091224D9290870F300911D1B /* Network Layer */,
@@ -149,6 +158,7 @@
 				09B0206B2909D4D400E6AF8A /* Extensions.swift */,
 				09672F6A290AFC1600F1C7D8 /* BaseViewController.swift */,
 				09672F74290B0E5300F1C7D8 /* ImageDownloader.swift */,
+				0934CC7B290C7B3900FDA506 /* AppDefaults.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -199,6 +209,22 @@
 			path = Presentation;
 			sourceTree = "<group>";
 		};
+		0934CC80290C8B2200FDA506 /* CollectionViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				0934CC7E290C866000FDA506 /* ImageCollectionViewCell.swift */,
+			);
+			name = CollectionViewCells;
+			sourceTree = "<group>";
+		};
+		0934CC81290C8B2E00FDA506 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				09B020652909CA8C00E6AF8A /* HomeTableViewCell.swift */,
+			);
+			name = TableViewCells;
+			sourceTree = "<group>";
+		};
 		09B020522909B84F00E6AF8A /* UseCase */ = {
 			isa = PBXGroup;
 			children = (
@@ -230,8 +256,9 @@
 		09B020562909B9A500E6AF8A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0934CC81290C8B2E00FDA506 /* TableViewCells */,
+				0934CC80290C8B2200FDA506 /* CollectionViewCells */,
 				091224E2290870F300911D1B /* HomeViewController.swift */,
-				09B020652909CA8C00E6AF8A /* HomeTableViewCell.swift */,
 				09B020692909D47700E6AF8A /* HomeNavigationViewController.swift */,
 				09B0206D2909DDA100E6AF8A /* BreedDetailViewController.swift */,
 			);
@@ -263,6 +290,15 @@
 				09B0206F2909DE2E00E6AF8A /* BreedDetailDependencyProvider.swift */,
 			);
 			path = DependencyProvider;
+			sourceTree = "<group>";
+		};
+		09CA4711290D1F7600FED777 /* DBManager */ = {
+			isa = PBXGroup;
+			children = (
+				09CA4712290D22F400FED777 /* DBManager.swift */,
+				09CA4714290D235500FED777 /* RealmImageModel.swift */,
+			);
+			path = DBManager;
 			sourceTree = "<group>";
 		};
 		44374C4AA162C42F35DAC93E /* Frameworks */ = {
@@ -399,6 +435,7 @@
 			files = (
 				09672F73290B0A6800F1C7D8 /* BreedDetailRemoteDatasource.swift in Sources */,
 				091224EB290877E800911D1B /* NetworkManager.swift in Sources */,
+				0934CC7F290C866000FDA506 /* ImageCollectionViewCell.swift in Sources */,
 				09B020722909DEC900E6AF8A /* BreedDetailViewModel.swift in Sources */,
 				09B0205A2909BCFC00E6AF8A /* HomeViewModel.swift in Sources */,
 				09B020602909BD6700E6AF8A /* HomeDependencyProvider.swift in Sources */,
@@ -418,9 +455,12 @@
 				09B020642909BE0D00E6AF8A /* HomeRemoteDatasource.swift in Sources */,
 				09B020742909DF4B00E6AF8A /* FavouriteBreedUsecase.swift in Sources */,
 				09B020622909BE0300E6AF8A /* HomeRepository.swift in Sources */,
+				09CA4713290D22F400FED777 /* DBManager.swift in Sources */,
+				0934CC7C290C7B3900FDA506 /* AppDefaults.swift in Sources */,
 				09B0205C2909BD0B00E6AF8A /* GetAllBreedsUsecase.swift in Sources */,
 				09B0206C2909D4D400E6AF8A /* Extensions.swift in Sources */,
 				09672F6D290B091600F1C7D8 /* GetBreedImagesUsecase.swift in Sources */,
+				09CA4715290D235500FED777 /* RealmImageModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

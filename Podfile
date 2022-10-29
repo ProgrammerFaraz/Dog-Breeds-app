@@ -8,5 +8,6 @@ target 'DogsBreedApp' do
   # Pods for DogsBreedApp
 
   pod 'Moya'
+  pod 'RealmSwift'
 
 end

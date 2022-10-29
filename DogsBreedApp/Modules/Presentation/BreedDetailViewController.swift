@@ -10,9 +10,8 @@ import UIKit
 class BreedDetailViewController: BaseViewController {
     
     //MARK: - OUTLETS
-    @IBOutlet weak var dogImageView: UIImageView!
     @IBOutlet weak var breedNameLabel: UILabel!
-    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var collectionView: UICollectionView!
     
     //MARK: - PROPERTIES
     var viewModel: DefaultBreedDetailViewModel?
@@ -24,18 +23,16 @@ class BreedDetailViewController: BaseViewController {
         setupviews()
         bindHomeViewModel()
         getImage()
-        // Do any additional setup after loading the view.
     }
     
     //MARK: - SETUP
     func setupviews() {
-        self.breedNameLabel.text = breedName
+        breedNameLabel.text = breedName
     }
     
     private func bindHomeViewModel() {
-        viewModel?.onSuccess = { [weak self] image in
-            self?.dogImageView.image = image
-            self?.activityIndicator.stopAnimating()
+        viewModel?.onSuccess = { [weak self] in
+            self?.collectionView.reloadData()
         }
         viewModel?.onError = { error in
             print("onError called with \(error)")
@@ -43,8 +40,31 @@ class BreedDetailViewController: BaseViewController {
     }
     
     private func getImage() {
-        activityIndicator.startAnimating()
-        viewModel?.getBreedImage(breed: breedName, method: .remote)
+        viewModel?.getBreedImage(breed: breedName.lowercased(), method: .remote)
+    }
+    
+}
+
+extension BreedDetailViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return viewModel?.imageURLs?.count ?? 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ImageCollectionViewCell.identifier, for: indexPath) as? ImageCollectionViewCell,
+              let viewModel = viewModel else {
+            return UICollectionViewCell()
+        }
+        cell.favouriteTapped = { [weak self] imageURL in
+            viewModel.addFavouriteImage(imageURL: imageURL, breedName: self?.breedName ?? "")
+        }
+        cell.configureCell(with: viewModel.imageURLs?[indexPath.row] ?? "")
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: collectionView.frame.width, height: collectionView.frame.height)
     }
 
 }

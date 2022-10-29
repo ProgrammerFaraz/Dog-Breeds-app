@@ -9,24 +9,23 @@ import Foundation
 import UIKit
 
 protocol BreedDetailViewModel {
-    func markFavourite(breed: String)
+    func addFavouriteImage(imageURL: String, breedName: String)
     func getBreedImage(breed: String, method: FetchingType)
 }
 
 class DefaultBreedDetailViewModel: BreedDetailViewModel {
-    
+
     //MARK: - PROPERTIES
     private var getBreedImageUsecase: GetBreedImagesUsecase
-    private var imageDownloader = ImageDownloader()
+    var imageURLs: [String]?
     
     //MARK: - CALLBACKS
-    var onSuccess: ((UIImage)->Void)?
+    var onSuccess: (()->Void)?
     var onError: ((String)->Void)?
     
     //MARK: - INIT
     init(getBreedImageUsecase: GetBreedImagesUsecase) {
         self.getBreedImageUsecase = getBreedImageUsecase
-        bindImageDownloader()
     }
     
     //MARK: - METHODS
@@ -38,25 +37,17 @@ class DefaultBreedDetailViewModel: BreedDetailViewModel {
                 self.onError?(errorMsg)
                 return
             }
-            guard let response = response,
-                  let url = URL(string: response.data ?? "") else { return }
-            self.imageDownloader.downloadImage(from: url)
+            guard let response = response else { return }
+            self.imageURLs = response.data
+            self.onSuccess?()
         }
     }
     
-    func markFavourite(breed: String) {
-        
-    }
-    
-    private func bindImageDownloader() {
-        self.imageDownloader.onSuccess = { [weak self] image in
-            guard let image = image else { return }
-            self?.onSuccess?(image)
-        }
-        
-//        self.imageDownloader.downloading = { [weak self] isDownloading in
-//
-//        }
+    func addFavouriteImage(imageURL: String, breedName: String) {
+        let realmImage = RealmImageModel()
+        realmImage.breedName = breedName
+        realmImage.images.append(imageURL)
+        DBManager.shared.addData(object: realmImage)
     }
 
 }

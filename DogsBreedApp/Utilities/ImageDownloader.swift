@@ -11,6 +11,7 @@ import UIKit
 class ImageDownloader {
     
     var onSuccess: ((UIImage?) -> Void)?
+    var onError: ((String?) -> Void)?
     var downloading: ((Bool) -> Void)?
     
     func getData(from url: URL, completion: @escaping (Data?, URLResponse?, Error?) -> ()) {
@@ -20,7 +21,9 @@ class ImageDownloader {
     func downloadImage(from url: URL) {
         downloading?(true)
         getData(from: url) { [weak self] data, response, error in
-            guard let data = data, error == nil else { return }
+            guard let data = data, error == nil else {
+                self?.onError?(error?.localizedDescription)
+                return }
             print(response?.suggestedFilename ?? url.lastPathComponent)
             self?.downloading?(false)
             DispatchQueue.main.async() { [weak self] in

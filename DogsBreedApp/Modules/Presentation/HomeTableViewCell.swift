@@ -10,6 +10,7 @@ import UIKit
 class HomeTableViewCell: UITableViewCell {
     
     static let rowHeight: CGFloat = 70
+    static let identifier = "HomeTableViewCell"
 
     @IBOutlet weak var titleLabel: UILabel!
     

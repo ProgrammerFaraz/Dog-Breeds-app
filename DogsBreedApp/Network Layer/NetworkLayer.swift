@@ -28,7 +28,7 @@ extension API: TargetType {
         case .listByBreed:
             return "breed/"
         case .breedImage(let params):
-            return "breed/\(params)/images/random"
+            return "breed/\(params)/images"
         }
     }
     
