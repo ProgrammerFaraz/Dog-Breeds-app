@@ -39,8 +39,16 @@ class BreedDetailViewController: BaseViewController {
         }
     }
     
+    //MARK: - VIEWMODEL CALLER
     private func getImage() {
         viewModel?.getBreedImage(breed: breedName.lowercased(), method: .remote)
+    }
+    
+    //MARK: - ACTIONS
+    @IBAction func seeLikedImagesTapped(_ sender: UIButton) {
+        if let vc = FavouriteBreedDependencyProvider.viewController {
+            self.route(to: vc, navigation: .push)
+        }
     }
     
 }
@@ -64,7 +72,7 @@ extension BreedDetailViewController: UICollectionViewDelegate, UICollectionViewD
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.width, height: collectionView.frame.height)
+        return CGSize(width: self.collectionView.frame.width, height: self.collectionView.frame.height)
     }
 
 }

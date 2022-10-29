@@ -8,15 +8,17 @@
 import Foundation
 
 protocol FavouriteBreedUsecase {
-    func markFavourite(breed: String)
+    func markFavourite(imageURL: String, breedName: String)
 }
 
-//class DefaultFavouriteBreedUsecase: FavouriteBreedUsecase {
-//    
-//    /// Method to mark breed favourite
-//    /// - Parameter completion: closure to be executed once all breeds are fetched from server
-//    func fetchAllDogBreeds(method: FetchingType = .remote, completion: @escaping (DogBreedsModel?, String?) -> ()) {
-//        u
-//    }
-//
-//}
+class DefaultFavouriteBreedUsecase: FavouriteBreedUsecase {
+    
+    /// Method to mark breed favourite
+    func markFavourite(imageURL: String, breedName: String) {
+        let realmImage = RealmImageModel()
+        realmImage.breedName = breedName
+        realmImage.images.append(imageURL)
+        DBManager.shared.addData(object: realmImage)
+    }
+
+}

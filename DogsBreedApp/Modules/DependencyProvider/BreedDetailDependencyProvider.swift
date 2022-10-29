@@ -24,10 +24,14 @@ struct BreedDetailDependencyProvider {
     static var getBreedImagesUsecase: GetBreedImagesUsecase {
         return DefaultGetBreedImagesUsecase(repository: breedDetailRepository)
     }
+    
+    static var markFavouriteBreedUsecase: FavouriteBreedUsecase {
+        return DefaultFavouriteBreedUsecase()
+    }
 
     /// Resolved ViewModel
     static var viewModel: DefaultBreedDetailViewModel {
-        return DefaultBreedDetailViewModel(getBreedImageUsecase: getBreedImagesUsecase)
+        return DefaultBreedDetailViewModel(getBreedImageUsecase: getBreedImagesUsecase, markFavouriteBreedUsecase: markFavouriteBreedUsecase)
     }
 
     /// Resolved ViewController

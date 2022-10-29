@@ -38,6 +38,15 @@
 		09B020742909DF4B00E6AF8A /* FavouriteBreedUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B020732909DF4B00E6AF8A /* FavouriteBreedUsecase.swift */; };
 		09CA4713290D22F400FED777 /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CA4712290D22F400FED777 /* DBManager.swift */; };
 		09CA4715290D235500FED777 /* RealmImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CA4714290D235500FED777 /* RealmImageModel.swift */; };
+		09CA4717290D4DFB00FED777 /* BreedNameCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CA4716290D4DFB00FED777 /* BreedNameCollectionViewCell.swift */; };
+		09CA471B290D4EA800FED777 /* FavouriteBreedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CA471A290D4EA800FED777 /* FavouriteBreedViewController.swift */; };
+		09CA471D290D50FD00FED777 /* FavouriteBreedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CA471C290D50FD00FED777 /* FavouriteBreedViewModel.swift */; };
+		09CA471F290D523300FED777 /* GetFavouriteBreedUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CA471E290D523300FED777 /* GetFavouriteBreedUsecase.swift */; };
+		09CA4721290D524500FED777 /* GetAllFavouriteBreedsUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CA4720290D524500FED777 /* GetAllFavouriteBreedsUsecase.swift */; };
+		09CA4725290D527800FED777 /* FavouriteBreedRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CA4724290D527800FED777 /* FavouriteBreedRepository.swift */; };
+		09CA4727290D529100FED777 /* FavouriteBreedLocalDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CA4726290D529100FED777 /* FavouriteBreedLocalDatasource.swift */; };
+		09CA4729290D5ACD00FED777 /* FavouriteBreedDependencyProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CA4728290D5ACD00FED777 /* FavouriteBreedDependencyProvider.swift */; };
+		09CA472B290D607200FED777 /* FavouriteBreedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CA472A290D607200FED777 /* FavouriteBreedTableViewCell.swift */; };
 		666E8004E65A6EE2EE9FBAC3 /* Pods_DogsBreedApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE16DB2B4DFB9645D2A258A5 /* Pods_DogsBreedApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +84,15 @@
 		09B020732909DF4B00E6AF8A /* FavouriteBreedUsecase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteBreedUsecase.swift; sourceTree = "<group>"; };
 		09CA4712290D22F400FED777 /* DBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
 		09CA4714290D235500FED777 /* RealmImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmImageModel.swift; sourceTree = "<group>"; };
+		09CA4716290D4DFB00FED777 /* BreedNameCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedNameCollectionViewCell.swift; sourceTree = "<group>"; };
+		09CA471A290D4EA800FED777 /* FavouriteBreedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteBreedViewController.swift; sourceTree = "<group>"; };
+		09CA471C290D50FD00FED777 /* FavouriteBreedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteBreedViewModel.swift; sourceTree = "<group>"; };
+		09CA471E290D523300FED777 /* GetFavouriteBreedUsecase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFavouriteBreedUsecase.swift; sourceTree = "<group>"; };
+		09CA4720290D524500FED777 /* GetAllFavouriteBreedsUsecase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllFavouriteBreedsUsecase.swift; sourceTree = "<group>"; };
+		09CA4724290D527800FED777 /* FavouriteBreedRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteBreedRepository.swift; sourceTree = "<group>"; };
+		09CA4726290D529100FED777 /* FavouriteBreedLocalDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteBreedLocalDatasource.swift; sourceTree = "<group>"; };
+		09CA4728290D5ACD00FED777 /* FavouriteBreedDependencyProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteBreedDependencyProvider.swift; sourceTree = "<group>"; };
+		09CA472A290D607200FED777 /* FavouriteBreedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteBreedTableViewCell.swift; sourceTree = "<group>"; };
 		0B269E8153910AC455B23643 /* Pods-DogsBreedApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DogsBreedApp.release.xcconfig"; path = "Target Support Files/Pods-DogsBreedApp/Pods-DogsBreedApp.release.xcconfig"; sourceTree = "<group>"; };
 		8B1FE567DB80CC6FD7D5F3B1 /* Pods-DogsBreedApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DogsBreedApp.debug.xcconfig"; path = "Target Support Files/Pods-DogsBreedApp/Pods-DogsBreedApp.debug.xcconfig"; sourceTree = "<group>"; };
 		CE16DB2B4DFB9645D2A258A5 /* Pods_DogsBreedApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DogsBreedApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -213,6 +231,7 @@
 			isa = PBXGroup;
 			children = (
 				0934CC7E290C866000FDA506 /* ImageCollectionViewCell.swift */,
+				09CA4716290D4DFB00FED777 /* BreedNameCollectionViewCell.swift */,
 			);
 			name = CollectionViewCells;
 			sourceTree = "<group>";
@@ -221,6 +240,7 @@
 			isa = PBXGroup;
 			children = (
 				09B020652909CA8C00E6AF8A /* HomeTableViewCell.swift */,
+				09CA472A290D607200FED777 /* FavouriteBreedTableViewCell.swift */,
 			);
 			name = TableViewCells;
 			sourceTree = "<group>";
@@ -231,6 +251,8 @@
 				09B0205B2909BD0B00E6AF8A /* GetAllBreedsUsecase.swift */,
 				09B020732909DF4B00E6AF8A /* FavouriteBreedUsecase.swift */,
 				09672F6C290B091600F1C7D8 /* GetBreedImagesUsecase.swift */,
+				09CA471E290D523300FED777 /* GetFavouriteBreedUsecase.swift */,
+				09CA4720290D524500FED777 /* GetAllFavouriteBreedsUsecase.swift */,
 			);
 			name = UseCase;
 			sourceTree = "<group>";
@@ -249,6 +271,7 @@
 			children = (
 				09B020592909BCFC00E6AF8A /* HomeViewModel.swift */,
 				09B020712909DEC900E6AF8A /* BreedDetailViewModel.swift */,
+				09CA471C290D50FD00FED777 /* FavouriteBreedViewModel.swift */,
 			);
 			name = ViewModel;
 			sourceTree = "<group>";
@@ -256,11 +279,10 @@
 		09B020562909B9A500E6AF8A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				09CA4719290D4E7700FED777 /* NavControllers */,
+				09CA4718290D4E6B00FED777 /* ViewControllers */,
 				0934CC81290C8B2E00FDA506 /* TableViewCells */,
 				0934CC80290C8B2200FDA506 /* CollectionViewCells */,
-				091224E2290870F300911D1B /* HomeViewController.swift */,
-				09B020692909D47700E6AF8A /* HomeNavigationViewController.swift */,
-				09B0206D2909DDA100E6AF8A /* BreedDetailViewController.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -270,6 +292,7 @@
 			children = (
 				09B020612909BE0300E6AF8A /* HomeRepository.swift */,
 				09672F70290B0A4E00F1C7D8 /* BreedDetailRepository.swift */,
+				09CA4724290D527800FED777 /* FavouriteBreedRepository.swift */,
 			);
 			name = Repository;
 			sourceTree = "<group>";
@@ -277,8 +300,8 @@
 		09B020582909B9B300E6AF8A /* DataSource */ = {
 			isa = PBXGroup;
 			children = (
-				09B020632909BE0D00E6AF8A /* HomeRemoteDatasource.swift */,
-				09672F72290B0A6800F1C7D8 /* BreedDetailRemoteDatasource.swift */,
+				09CA4723290D525F00FED777 /* Local */,
+				09CA4722290D525500FED777 /* Remote */,
 			);
 			name = DataSource;
 			sourceTree = "<group>";
@@ -288,6 +311,7 @@
 			children = (
 				09B0205F2909BD6700E6AF8A /* HomeDependencyProvider.swift */,
 				09B0206F2909DE2E00E6AF8A /* BreedDetailDependencyProvider.swift */,
+				09CA4728290D5ACD00FED777 /* FavouriteBreedDependencyProvider.swift */,
 			);
 			path = DependencyProvider;
 			sourceTree = "<group>";
@@ -299,6 +323,41 @@
 				09CA4714290D235500FED777 /* RealmImageModel.swift */,
 			);
 			path = DBManager;
+			sourceTree = "<group>";
+		};
+		09CA4718290D4E6B00FED777 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				091224E2290870F300911D1B /* HomeViewController.swift */,
+				09B0206D2909DDA100E6AF8A /* BreedDetailViewController.swift */,
+				09CA471A290D4EA800FED777 /* FavouriteBreedViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		09CA4719290D4E7700FED777 /* NavControllers */ = {
+			isa = PBXGroup;
+			children = (
+				09B020692909D47700E6AF8A /* HomeNavigationViewController.swift */,
+			);
+			name = NavControllers;
+			sourceTree = "<group>";
+		};
+		09CA4722290D525500FED777 /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				09672F72290B0A6800F1C7D8 /* BreedDetailRemoteDatasource.swift */,
+				09B020632909BE0D00E6AF8A /* HomeRemoteDatasource.swift */,
+			);
+			name = Remote;
+			sourceTree = "<group>";
+		};
+		09CA4723290D525F00FED777 /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				09CA4726290D529100FED777 /* FavouriteBreedLocalDatasource.swift */,
+			);
+			name = Local;
 			sourceTree = "<group>";
 		};
 		44374C4AA162C42F35DAC93E /* Frameworks */ = {
@@ -438,13 +497,17 @@
 				0934CC7F290C866000FDA506 /* ImageCollectionViewCell.swift in Sources */,
 				09B020722909DEC900E6AF8A /* BreedDetailViewModel.swift in Sources */,
 				09B0205A2909BCFC00E6AF8A /* HomeViewModel.swift in Sources */,
+				09CA4727290D529100FED777 /* FavouriteBreedLocalDatasource.swift in Sources */,
 				09B020602909BD6700E6AF8A /* HomeDependencyProvider.swift in Sources */,
 				09672F6B290AFC1600F1C7D8 /* BaseViewController.swift in Sources */,
 				091224E9290870F300911D1B /* HomeViewController.swift in Sources */,
 				09B020512909B6FC00E6AF8A /* DogBreedsModel.swift in Sources */,
+				09CA472B290D607200FED777 /* FavouriteBreedTableViewCell.swift in Sources */,
 				09B020702909DE2E00E6AF8A /* BreedDetailDependencyProvider.swift in Sources */,
 				09672F6F290B09FF00F1C7D8 /* DogImageModel.swift in Sources */,
 				09672F75290B0E5300F1C7D8 /* ImageDownloader.swift in Sources */,
+				09CA4717290D4DFB00FED777 /* BreedNameCollectionViewCell.swift in Sources */,
+				09CA4729290D5ACD00FED777 /* FavouriteBreedDependencyProvider.swift in Sources */,
 				09B020662909CA8C00E6AF8A /* HomeTableViewCell.swift in Sources */,
 				091224E7290870F300911D1B /* NetworkLayer.swift in Sources */,
 				091224E8290870F300911D1B /* AppDelegate.swift in Sources */,
@@ -453,12 +516,17 @@
 				09B0206E2909DDA100E6AF8A /* BreedDetailViewController.swift in Sources */,
 				09672F71290B0A4E00F1C7D8 /* BreedDetailRepository.swift in Sources */,
 				09B020642909BE0D00E6AF8A /* HomeRemoteDatasource.swift in Sources */,
+				09CA471D290D50FD00FED777 /* FavouriteBreedViewModel.swift in Sources */,
 				09B020742909DF4B00E6AF8A /* FavouriteBreedUsecase.swift in Sources */,
 				09B020622909BE0300E6AF8A /* HomeRepository.swift in Sources */,
+				09CA471B290D4EA800FED777 /* FavouriteBreedViewController.swift in Sources */,
+				09CA471F290D523300FED777 /* GetFavouriteBreedUsecase.swift in Sources */,
+				09CA4725290D527800FED777 /* FavouriteBreedRepository.swift in Sources */,
 				09CA4713290D22F400FED777 /* DBManager.swift in Sources */,
 				0934CC7C290C7B3900FDA506 /* AppDefaults.swift in Sources */,
 				09B0205C2909BD0B00E6AF8A /* GetAllBreedsUsecase.swift in Sources */,
 				09B0206C2909D4D400E6AF8A /* Extensions.swift in Sources */,
+				09CA4721290D524500FED777 /* GetAllFavouriteBreedsUsecase.swift in Sources */,
 				09672F6D290B091600F1C7D8 /* GetBreedImagesUsecase.swift in Sources */,
 				09CA4715290D235500FED777 /* RealmImageModel.swift in Sources */,
 			);

@@ -17,6 +17,7 @@ class DefaultBreedDetailViewModel: BreedDetailViewModel {
 
     //MARK: - PROPERTIES
     private var getBreedImageUsecase: GetBreedImagesUsecase
+    private var markFavouriteBreedUsecase: FavouriteBreedUsecase
     var imageURLs: [String]?
     
     //MARK: - CALLBACKS
@@ -24,8 +25,9 @@ class DefaultBreedDetailViewModel: BreedDetailViewModel {
     var onError: ((String)->Void)?
     
     //MARK: - INIT
-    init(getBreedImageUsecase: GetBreedImagesUsecase) {
+    init(getBreedImageUsecase: GetBreedImagesUsecase, markFavouriteBreedUsecase: FavouriteBreedUsecase) {
         self.getBreedImageUsecase = getBreedImageUsecase
+        self.markFavouriteBreedUsecase = markFavouriteBreedUsecase
     }
     
     //MARK: - METHODS
@@ -44,10 +46,7 @@ class DefaultBreedDetailViewModel: BreedDetailViewModel {
     }
     
     func addFavouriteImage(imageURL: String, breedName: String) {
-        let realmImage = RealmImageModel()
-        realmImage.breedName = breedName
-        realmImage.images.append(imageURL)
-        DBManager.shared.addData(object: realmImage)
+        markFavouriteBreedUsecase.markFavourite(imageURL: imageURL, breedName: breedName)
     }
 
 }
